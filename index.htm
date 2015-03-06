@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+
+	<!--
+
+		HyperBook: Portable Browser-Powered Book System
+		2015 by Tricorne Games
+
+		This software is designed to make a portable HTML-structured book; principally for the use of creating
+		RPG gaming books, but any kind of book where you can render text, images, and hyperlinks can also be used.
+
+		The material you create with it should be able to be hosted online as a standalone website, but the
+		advantage is that it doesn't need significant back-end services like a database to bring up book content,
+		which principally allows you to put this on a portable device and read the "index.htm" to get a
+		fully-functional website-like book interface, which is especially useful as an electronic alternative
+		to paper books (an answer to keeping down the page-flipping for searching, and making duplicates for everyone).
+
+		It does this functionality, using only one HTML page to lay out the actual interface, one CSS document
+		to stylize the content in the interface, and JavaScript to retrieve and reload data from around the book.
+
+		This software is designed to meet HTML5/CSS3 standards, and is released under the MIT License.
+
+	-->
+
+
+
+	<!-- DATA HANDLING -->
+	<head>
+
+
+
+		<title>HyperBook: Portable HTML Book System</title>
+
+
+
+		<!-- PRELOADS [Prepare the page for rendering.] -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+		<!-- DETAILS [About the file.] -->
+		<meta name="author" content="AUTHOR" />
+		<meta name="description" content="DESCRIPTION" />
+
+
+
+		<!-- RESOURCES [Load external files.] -->
+		<link rel="stylesheet" type="text/css" href="data/main.css" />
+		<script type = "text/javascript" src="data/jquery-2.1.3.min.js"></script>
+		<script type = "text/javascript" src="data/renderpage.js"></script>
+
+
+
+	</head>
+
+
+
+	<!-- CONTENT HANDLING -->
+	<body>
+
+
+
+		<div id="container">
+
+			<!-- HEADER [The topmost section of the book. Contains the name, version, author, or other data.] -->
+			<div id="header">
+				<div id="hdr_title">TITLE</div>
+				<div id="hdr_author">AUTHOR</div>
+				<div id="hdr_version">VERSION</div>
+			</div>
+
+
+
+			<!-- MIDSECTION [Wrapper for both the Navigation and Content columns.] -->
+			<div id="midsection">
+
+
+
+				<!-- NAVIGATION [The "Table of Contents" of the book.] -->
+				<div id="navigation">
+
+					<div id="nav_header">Table of Contents</div>
+
+					<div class="nav_section">
+						<div class="nav_sectionheader">Section 1</div>
+						<ul>
+							<li><a href="pages/page1.htm">Link 1</a></li>
+							<li><a href="pages/page1.htm">Link 2</a></li>
+							<li><a href="pages/page1.htm">Link 3</a>
+								<ul>
+									<li><a href="pages/page1.htm">Sub-Link</a></li>
+									<li><a href="pages/page1.htm">Sub-Link</a></li>
+									<li><a href="pages/page1.htm">Sub-Link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+
+
+				<!-- CONTENT [The body of the book, where all the text, images, tables, etc., get rendered.] -->
+				<div id="content_container">
+					<div id="content"></div>
+				</div>
+
+
+
+			</div>
+
+
+
+			<!-- FOOTER [The bottom-most section of the book. Contains similar data as the header.] -->
+			<div id="footer">
+				<div id="ftr_mark">"TITLE" DATE AUTHOR</div>
+				<div id="ftr_message">Message</div>
+			</div>
+
+		</div>
+
+
+
+	</body>
+
+
+
+</html>

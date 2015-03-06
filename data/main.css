@@ -1,0 +1,212 @@
+/*
+
+	HyperBook: Portable Browser-Powered Book System
+	2015 by Tricorne Games
+
+	Main Style Sheet
+
+	This is the main stylesheet applied throughout the entire book.
+
+	For convenience, each property is listed in alphabetic order.
+
+*/
+
+
+
+
+
+/* IMPORTS */
+
+/* @import url("newstyle.css"); */
+
+
+
+
+
+/* MAIN */
+
+/* Background Image */
+body {
+	/*
+		Background Image used below is a public-domain texture from:
+		http://pdtextures.blogspot.com/2008/03/tenth-set.html
+		(acquired circa late 2011)
+	*/
+	background-attachment: fixed;
+	background-image: url('background.jpg');
+	font-family: tahoma, arial, sans-serif;
+}
+
+
+
+/* Book Container */
+#container {
+	margin: 0 auto;
+	width: 85%;
+}
+
+
+
+/* Header */
+
+#header {
+	background-color: #006666;
+	border: 3px #000000 solid;
+	clear: both;
+	color: #FFFFFF;
+	padding: 10px;
+	text-align: center;
+}
+
+#header a {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#hdr_title {
+	font-size: 2em;
+}
+
+
+
+/* Footer */
+
+#footer {
+	background-color: #006666;
+	border: 3px #000000 solid;
+	clear: both;
+	color: #FFFFFF;
+	padding: 10px;
+	text-align: center;
+}
+
+#footer a {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#ftr_message {
+	font-size: 0.8em;
+}
+
+
+
+/* Midsection */
+#midsection {
+	/*  */
+}
+
+
+
+/* Navigation */
+
+#navigation {
+	background-color: #006666;
+	border: 3px #000000 solid;
+	color: #FFFFFF;
+	font-size: 0.8em;
+	float: left;
+	margin: 0 0 10px 0;
+	min-height: auto;
+	padding: 10px;
+	width: 175px;
+}
+
+#nav_header {
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+}
+
+.nav_sectionheader {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#navigation ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 10px;
+}
+
+#navigation ul ul {
+	list-style-type: none;
+	margin: 0 0 0 20px;
+}
+
+#navigation li, #navigation li li {
+	background-color: #006666;
+	border-top: 3px #666666 ridge;
+	color: #333333;
+	margin: 2px;
+	padding: 2px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+#navigation a:link, #navigation a:visited {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+
+#navigation a:hover, #navigation a:active {
+	background-color: #009999;
+}
+
+
+
+/* Content */
+
+#content_container {
+	background-color: #FFFFFF;
+	border: 3px #000000 solid;
+	margin: 10px 0 10px 210px;
+	min-height: auto;
+	padding: 20px;
+	width: auto;
+}
+
+#cnt_title {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 2px;
+	text-align: center;
+}
+
+#cnt_subtitle {
+	font-size: 0.75em;
+	font-style: italic;
+	padding: 2px;
+	text-align: center;
+}
+
+#content img {
+	border: 3px #000000 double;
+	margin: 3px;
+	padding: 2px;
+}
+
+#content {
+	line-height: 1.5em;
+
+}
+
+/* Example classes are good for describing something in the text stream. */
+#content .example {
+	font-size: 0.8em;
+	font-style: italic;
+	text-indent: 20px;
+}
+
+/* Sidenote classes are good for side information separate from the text stream. */
+#content .sidenote {
+	border: 1px #999999 dotted;
+	color: #666666;
+	display: inline-block;
+	font-style: italic;
+	padding: 15px;
+	position: relative;
+	left: 20px;
+	width: auto;
+}
