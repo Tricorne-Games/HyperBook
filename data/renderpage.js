@@ -21,17 +21,18 @@ $(document).ready(function() {
 
 		e.preventDefault();
 
-		$('#content_container').animate({height: 'hide'}, 500);
-		$('#navigation').animate({height: 'min-height'}, 500);
-
-		$('#content').fadeOut(500);
-
 		var ahref = $(this).attr('href');
-		$('#content').load(ahref);
+		var $c = $('#content');
+		var $cc = $('#content_container');
 
-		$('#content').fadeIn(500);
-
-		$('#content_container').animate({height: 'show'}, 500);
+		$c.fadeTo('fast', 0.0, function() {
+			$cc.animate({height: 'hide'}, 500);
+			$c.load(ahref + '#content', function(){
+				$cc.animate({height: 'show'}, 500, function(){
+					$c.fadeTo('slow', 1.0);
+				});
+			});
+		});
 
 		return false;
 
