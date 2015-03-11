@@ -19,7 +19,12 @@ $(document).ready(function() {
 	// Navigating Pages
 	$(document).on('click', 'a', function(e) {
 
-		e.preventDefault();
+		if ($(this).attr('target') == '_blank') {
+			return true;
+		}
+		else {
+			e.preventDefault();
+		}
 
 		var ahref = $(this).attr('href');
 		var $c = $('#content');
